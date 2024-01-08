@@ -19,13 +19,12 @@ export const Header = () => {
                 </ul>
             </StyledMenu>
             <Button as='a' width='143px' height='48px'>Contact</Button>
-
         </StyledHeader>
     );
 };
 
 const StyledHeader = styled.header`
-  background-color: #eac2d7;
+  background-color: rgba(36, 96, 80, 0.87);
   display: flex;
   justify-content: space-around;
 `
@@ -37,10 +36,6 @@ const StyledMenu = styled.nav`
   }
 `
 
-const MenuItem = styled.li`
+const MenuItem = styled.li``
 
-`
-
-const MenuLink = styled.a`
-
-`
+const MenuLink = styled.a``
