@@ -7,10 +7,10 @@ import {Card} from './card/Card';
 export const Amazing = () => {
     return (
         <StyledAmazing>
-            <TitleBlock>
+            <AmazingContent>
                 <Title><span>Amazing</span> and Super Unique Art of This <span>Week</span> </Title>
                 <Button styleButton='accent'> See All </Button>
-            </TitleBlock>
+            </AmazingContent>
 
             <Card />
         </StyledAmazing>
@@ -19,10 +19,9 @@ export const Amazing = () => {
 
 const StyledAmazing = styled.section`
   background-color: rgba(59, 56, 105, 0.59);
-  height: 100vh;
 `
 
-const TitleBlock = styled.div`
+const AmazingContent = styled.div`
   display: flex;
   justify-content: space-around;
 `

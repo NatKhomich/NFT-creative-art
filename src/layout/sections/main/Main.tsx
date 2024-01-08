@@ -5,6 +5,7 @@ import mainImage from '../../../assets/images/main/main.webp'
 import group from '../../../assets/images/main/group.webp'
 import star from '../../../assets/images/main/Star 1.png'
 import {theme} from '../../../styles/Theme';
+import {InfoLink} from '../../../components/infoLink/InfoLink';
 
 const statisticsItem = [
     {data: 8.9, small: 'K', text: 'Art work'},
@@ -17,9 +18,9 @@ export const Main = () => {
         <StyledMain>
             <GridContainer>
                 <GridItem>
-                    <TitleMain>
+                    <Title>
                         Discover and Collect The Best NFTs <span>Digital Art.</span>
-                    </TitleMain>
+                    </Title>
                     <Description>
                         Get started with the easiest and most secure platform to buy and trade digital ART and NFT’s.
                         Start exploring the world of digital art and NFTs today and take control of your digital assets
@@ -118,7 +119,7 @@ const GridItem = styled.div`
   }
 `
 
-const TitleMain = styled.h1`
+const Title = styled.h1`
   font-family: Spectral, sans-serif;
 `
 
@@ -128,10 +129,6 @@ const Description = styled.p`
 
 const LinkBlock = styled.div`
   display: flex;
-`
-
-const InfoLink = styled.a`
-
 `
 
 //item-2
