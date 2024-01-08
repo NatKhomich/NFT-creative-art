@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import {Button} from '../../../components/button/Button';
 import mainImage from '../../../assets/images/main/main.webp'
+import group from '../../../assets/images/main/group.webp'
+import star from '../../../assets/images/main/Star 1.png'
 import {theme} from '../../../styles/Theme';
 
 const statisticsItem = [
@@ -25,13 +27,15 @@ export const Main = () => {
                     </Description>
 
                     <LinkBlock>
-                        <Button as={'a'}>Explore Now</Button>
+                        <Button as={'a'} styleButton='accent'>Explore Now</Button>
                         <InfoLink href="#">Learn More</InfoLink>
                     </LinkBlock>
                 </GridItem>
 
                 <GridItem>
                     <Image src={mainImage} alt="image-info"/>
+                    {/*<img src={group} alt=''/>*/}
+                    <img src={star} alt=''/>
                     <MainCard>
                         <CardItemGroup>
                             <CardItem>
@@ -45,14 +49,14 @@ export const Main = () => {
                             </CardItem>
                         </CardItemGroup>
                         <CardButtonGroup>
-                            <CardButton> Place A Bid </CardButton>
+                            <Button styleButton='base'> Place A Bid </Button>
                         </CardButtonGroup>
 
                     </MainCard>
                 </GridItem>
 
                 <GridItem>
-                    {statisticsItem.map(el => (<Statistics>
+                    {statisticsItem.map((el, index) => (<Statistics key={index}>
                             <div>{el.data}<small>{el.small}</small></div>
                             <span>{el.text}</span>
                         </Statistics>
@@ -93,6 +97,17 @@ const GridItem = styled.div`
     grid-area: 1/2/3/3;
     background-color: #27fd44;
     margin-left: 92px;
+    position: relative;
+
+    &::before {
+      content: url(${group});
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      left: -60px;
+      top: 200px;
+      z-index: 2;
+    }
   }
 
   &:last-child {
@@ -141,15 +156,6 @@ const CardItemGroup = styled.div`
 const CardItem = styled.div`
   display: flex;
   flex-direction: column;
-`
-
-const CardButton = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 264px;
-  height: 52px;
-  background-color: #7575f1;
 `
 
 const CardButtonGroup = styled.div`

@@ -18,7 +18,7 @@ export const Header = () => {
                     })}
                 </ul>
             </StyledMenu>
-            <Button as='a' width='143px' height='48px'>Contact</Button>
+            <Button as='a' width='143px' height='48px' styleButton='accent'>Contact</Button>
         </StyledHeader>
     );
 };
