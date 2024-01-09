@@ -31,7 +31,6 @@ export const Best = () => {
 
 const StyledBest = styled.section`
   background-color: rgba(30, 52, 107, 0.87);
-  height: 100vh;
   display: flex;
 `
 
