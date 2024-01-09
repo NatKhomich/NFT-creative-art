@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Button} from '../../../components/button/Button';
 import {Card} from './card/Card';
+import {Title} from '../../../components/title/Title';
 
 
 export const Amazing = () => {
@@ -26,9 +27,6 @@ const AmazingContent = styled.div`
   justify-content: space-around;
 `
 
-const Title = styled.h2`
-
-`
 
 
 

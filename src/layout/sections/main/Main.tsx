@@ -6,6 +6,7 @@ import group from '../../../assets/images/main/group.webp'
 import star from '../../../assets/images/main/Star 1.png'
 import {theme} from '../../../styles/Theme';
 import {InfoLink} from '../../../components/infoLink/InfoLink';
+import {Description} from '../../../components/description/Description';
 
 const statisticsItem = [
     {data: 8.9, small: 'K', text: 'Art work'},
@@ -121,10 +122,6 @@ const GridItem = styled.div`
 
 const Title = styled.h1`
   font-family: Spectral, sans-serif;
-`
-
-const Description = styled.p`
-
 `
 
 const LinkBlock = styled.div`

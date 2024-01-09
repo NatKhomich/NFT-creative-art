@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Button} from '../../../components/button/Button';
+import {Title} from '../../../components/title/Title';
 
 import osvaldo from '../../../assets/images/popular/osvaldo.webp'
 import ranson from '../../../assets/images/popular/ranson.webp'
@@ -101,9 +102,7 @@ const PopularContent = styled.div`
   display: flex;
 `
 
-const Title = styled.h2`
 
-`
 
 const ArtistImage = styled.div`
 

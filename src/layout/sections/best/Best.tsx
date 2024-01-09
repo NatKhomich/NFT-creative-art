@@ -4,6 +4,8 @@ import {Button} from '../../../components/button/Button';
 import {InfoLink} from '../../../components/infoLink/InfoLink';
 import imageOne from '../../../assets/images/best/create1.webp'
 import imageTwo from '../../../assets/images/best/create2.webp'
+import {Title} from '../../../components/title/Title';
+import {Description} from '../../../components/description/Description';
 
 export const Best = () => {
     return (
@@ -35,14 +37,6 @@ const StyledBest = styled.section`
 `
 
 const BestContent = styled.div`
-
-`
-
-const Title = styled.h2`
-
-`
-
-const Description = styled.p`
 
 `
 
