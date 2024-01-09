@@ -5,6 +5,7 @@ import {Amazing} from './layout/sections/amazing/Amazing';
 import {Best} from './layout/sections/best/Best';
 import {Popular} from './layout/sections/popular/Popular';
 import {Subscribe} from './layout/sections/subscribe/Subscribe';
+import {Footer} from './layout/footer/Footer';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Best/>
             <Popular/>
             <Subscribe/>
+            <Footer/>
         </>
     );
 }
