@@ -38,6 +38,10 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  section {
+    padding: 100px 0;
+  }
+
   button {
     border: none;
     background-color: unset;

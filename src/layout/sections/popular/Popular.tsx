@@ -14,6 +14,7 @@ import ransonAvatar from '../../../assets/images/popular/avatar/ransonAvatar.png
 import cristioAvatar from '../../../assets/images/popular/avatar/cristioAvatar.png'
 import sebastianAvatar from '../../../assets/images/popular/avatar/sebastianAvatar.png'
 import abrahamAvatar from '../../../assets/images/popular/avatar/abrahamAvatar.png'
+import {Span} from '../../../components/span/Span';
 
 
 type PopularData = {
@@ -66,7 +67,7 @@ export const Popular = () => {
     return (
         <StyledPopular>
             <PopularContent>
-                <Title>Popular <span>Artists</span> On This Week</Title>
+                <Title>Popular <Span>Artists</Span> On This Week</Title>
                 <Button styleButton="accent">See All</Button>
             </PopularContent>
 

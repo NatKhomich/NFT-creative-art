@@ -6,6 +6,7 @@ import {Button} from '../../../components/button/Button';
 
 import photo1 from '../../../assets/images/subscribe/subscribe1.webp'
 import photo2 from '../../../assets/images/subscribe/subscribe2.webp'
+import {Span} from '../../../components/span/Span';
 
 
 export const Subscribe = () => {
@@ -18,7 +19,7 @@ export const Subscribe = () => {
             </SubscribeImage>
 
             <SubscribeContent>
-                <Title>Subscribe And <span> get ourUpdates</span> Every Week </Title>
+                <Title>Subscribe And <Span> get ourUpdates</Span> Every Week </Title>
                 <Description>
                     We have a blog related to NFT so we can share thoughts and routines on our blog which is updated
                     weekly

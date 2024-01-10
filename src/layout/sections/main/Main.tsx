@@ -7,6 +7,8 @@ import star from '../../../assets/images/main/Star 1.png'
 import {theme} from '../../../styles/Theme';
 import {InfoLink} from '../../../components/infoLink/InfoLink';
 import {Description} from '../../../components/description/Description';
+import {Container} from '../../../components/container/Container';
+import {Span} from '../../../components/span/Span';
 
 const statisticsItem = [
     {data: 8.9, small: 'K', text: 'Art work'},
@@ -17,6 +19,7 @@ const statisticsItem = [
 export const Main = () => {
     return (
         <StyledMain>
+            <Container>
             <GridContainer>
                 <GridItem>
                     <Title>
@@ -29,7 +32,7 @@ export const Main = () => {
                     </Description>
 
                     <LinkBlock>
-                        <Button as={'a'} styleButton='accent'>Explore Now</Button>
+                        <Button as={'a'} styleButton='accent' width='178px' height='52px'>Explore Now</Button>
                         <InfoLink href="#">Learn More</InfoLink>
                     </LinkBlock>
                 </GridItem>
@@ -37,7 +40,7 @@ export const Main = () => {
                 <GridItem>
                     <Image src={mainImage} alt="image-info"/>
                     {/*<img src={group} alt=''/>*/}
-                    <img src={star} alt=''/>
+                    {/*<img src={star} alt=''/>*/}
                     <MainCard>
                         <CardItemGroup>
                             <CardItem>
@@ -51,7 +54,7 @@ export const Main = () => {
                             </CardItem>
                         </CardItemGroup>
                         <CardButtonGroup>
-                            <Button styleButton='base'> Place A Bid </Button>
+                            <Button styleButton='base' width='264px' height='52px'> Place A Bid </Button>
                         </CardButtonGroup>
 
                     </MainCard>
@@ -59,25 +62,30 @@ export const Main = () => {
 
                 <GridItem>
                     {statisticsItem.map((el, index) => (<Statistics key={index}>
-                            <div>{el.data}<small>{el.small}</small></div>
-                            <span>{el.text}</span>
+                            <span> <Span>{el.data}</Span><span>{el.small}</span></span>
+                            <Text>{el.text}</Text>
                         </Statistics>
                     ))}
                 </GridItem>
 
             </GridContainer>
+            </Container>
         </StyledMain>
     );
 };
 
 const StyledMain = styled.section`
   height: 100vh;
+  margin-top: 50px;
 `
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-rows: repeat(2 544px);
-  grid-template-columns: repeat(2 585px);
+  grid-template-columns: 544px 1fr;
+  grid-template-rows: 457px 92px;
+  column-gap: 150px;
+  row-gap: 50px;
+  
   justify-content: center;
   align-content: center;
 
@@ -86,17 +94,17 @@ const GridContainer = styled.div`
 
 const GridItem = styled.div`
   max-width: 544px;
-  background-color: aqua;
 
   &:first-child {
     grid-area: 1/1/2/2;
-    background-color: #f65b5b;
+    background-color: rgba(252, 216, 216, 0.22);
     min-height: 420px;
+    margin-top: 20px;
   }
 
   &:nth-child(2) {
     grid-area: 1/2/3/3;
-    background-color: #27fd44;
+    background-color: rgba(142, 147, 142, 0.56);
     margin-left: 92px;
     position: relative;
 
@@ -109,11 +117,18 @@ const GridItem = styled.div`
       top: 200px;
       z-index: 2;
     }
+
+    &::after {
+      content: url(${star});
+      position: absolute;
+      left: 8px;
+      top: 268px;
+    }
   }
 
   &:last-child {
     grid-area: 2/1/3/2;
-    background-color: #5b68f6;
+    background-color: rgba(165, 170, 215, 0.59);
     display: flex;
     justify-content: space-between;
   }
@@ -121,10 +136,21 @@ const GridItem = styled.div`
 
 const Title = styled.h1`
   font-family: Spectral, sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  word-wrap: break-word;
+  
+  span {
+    color: ${theme.colors.accent};
+    font-size: 64px;
+    font-weight: 700;
+
+  }
 `
 
 const LinkBlock = styled.div`
   display: flex;
+  align-items: center;
 `
 
 //item-2
@@ -135,30 +161,82 @@ const Image = styled.img`
 const MainCard = styled.div`
   width: 304px;
   min-height: 170px;
+  padding: 20px;
   background-color: ${theme.colors.secondaryBg};
   border-radius: 16px;
   display: flex;
   flex-direction: column;
+  
+  position: absolute;
+  bottom: -40px;
+  right: 0;
 `
 
 const CardItemGroup = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 `
 
 const CardItem = styled.div`
   display: flex;
   flex-direction: column;
+  
+  & span {
+    font-size: 16px;
+    font-weight: 400;
+    color: ${theme.colors.accent};
+  }
+
+  & small {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0 20px;
+  }
 `
 
 const CardButtonGroup = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 24px;
+  margin-top: 14px;
 `
 
 //item-3
 const Statistics = styled.div`
+  font-size: 48px;
+  font-family: Spectral, sans-serif;
+  font-weight: 500;
 
+  display: flex;
+  flex-direction: column;
+  
+  position: relative;
+  
+  & span {
+  margin-bottom: 10px;
+  }
+
+  &+&::before {
+    content: '';
+    display: inline-block;
+    background-color: ${theme.colors.accent};
+
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    top: 0;
+    left: -94px;
+    z-index: 2;
+  }
+  
+  &:last-child {
+  margin-right: 24px;
+  }
+  
+`
+
+const Text = styled.span`
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Inter, sans-serif;
 `
