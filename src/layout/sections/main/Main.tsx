@@ -71,7 +71,6 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  background-color: rgba(96, 36, 36, 0.59);
   height: 100vh;
 `
 

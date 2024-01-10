@@ -1,5 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 import {theme} from './Theme';
+import bgImage from '../assets/images/bg.webp'
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -18,6 +19,14 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     color: ${theme.colors.font};
     line-height: 1.2;
+
+    background-image: linear-gradient(${theme.colors.primaryBg} 0%,${
+            theme.colors.primaryBg
+    } 100%), url("${bgImage}");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   a {

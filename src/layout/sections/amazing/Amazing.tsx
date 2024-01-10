@@ -19,7 +19,6 @@ export const Amazing = () => {
 };
 
 const StyledAmazing = styled.section`
-  background-color: rgba(59, 56, 105, 0.59);
 `
 
 const AmazingContent = styled.div`

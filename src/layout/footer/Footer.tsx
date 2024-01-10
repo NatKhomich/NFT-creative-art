@@ -62,7 +62,6 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: rgba(46, 50, 103, 0.85);
   display: flex;
   flex-direction: column;
   max-width: 1590px;

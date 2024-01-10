@@ -93,7 +93,6 @@ export const Popular = () => {
 };
 
 const StyledPopular = styled.section`
-  background-color: rgba(114, 59, 59, 0.87);
   display: flex;
   flex-direction: column;
 `

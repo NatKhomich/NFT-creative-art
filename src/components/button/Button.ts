@@ -19,17 +19,28 @@ export const Button = styled.button<Props>`
 
   width: ${props => props.width || '150px'};
   height: ${props => props.height || '50px'};
-  
- background-color: ${props => props.styleButton || 'transparent'};
-  
+
+  background-color: ${props => props.styleButton || 'transparent'};
+
   ${props => props.styleButton === 'base' && css<Props>`
     border: 1px solid ${theme.colors.accent};
     border-radius: 8px;
     color: ${theme.colors.accent};
+
+    &:hover {
+      background-color: #97b436;
+      color: ${theme.colors.fontBlack};
+      transition: .2s;
+    }
   `}
 
   ${props => props.styleButton === 'accent' && css<Props>`
     color: ${theme.colors.fontBlack};
     background-color: ${theme.colors.accent};
+
+    &:hover {
+      background-color: #97b436;
+      transition: .2s;
+    }
   `}
 `

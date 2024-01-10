@@ -34,7 +34,6 @@ export const Subscribe = () => {
 };
 
 const StyledSubscribe = styled.section`
-  background-color: rgba(44, 93, 29, 0.59);
   display: flex;
 `
 
