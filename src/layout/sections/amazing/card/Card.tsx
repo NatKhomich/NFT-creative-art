@@ -3,49 +3,8 @@ import {Icon} from '../../../../components/icon/Icon';
 import {Button} from '../../../../components/button/Button';
 import styled from 'styled-components';
 import {theme} from '../../../../styles/Theme';
-import cyberpunkImage from '../../../../assets/images/amazing/cyberpunk.webp'
-import chargeImage from '../../../../assets/images/amazing/charge.webp'
-import surgeonImage from '../../../../assets/images/amazing/surgeon.webp'
+import {cardsData} from '../cardsData/cardsData';
 
-type CardsDataProps = {
-    id: string
-    image: string
-    title: string
-    price: string
-    smallText: string
-    time: string
-    buttonText: string
-}
-
-const cardsData: CardsDataProps[] = [
-    {
-        id: '1',
-        image: cyberpunkImage,
-        title: 'Cyberpunk Cocomo',
-        price: '490ETH',
-        smallText: 'Ending In',
-        time: '03:24:56',
-        buttonText: 'Place A Bid'
-    },
-    {
-        id: '2',
-        image: chargeImage,
-        title: 'Charge, Qi tiao yu',
-        price: '490ETH',
-        smallText: 'Ending In',
-        time: '03:24:56',
-        buttonText: 'Place A Bid'
-    },
-    {
-        id: '3',
-        image: surgeonImage,
-        title: 'Surgeon, Josh Rife',
-        price: '490ETH',
-        smallText: 'Ending In',
-        time: '03:24:56',
-        buttonText: 'Place A Bid'
-    },
-]
 
 export const Card = () => {
     return (
@@ -76,17 +35,22 @@ export const Card = () => {
                     </Description>
                 </CardItem>
             ))}
+
         </StyledCard>
     );
 };
 
 const StyledCard = styled.div`
-  max-width: 410px;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 64px;
 `
 
 
 const CardItem = styled.div`
+  max-width: 410px;
   padding: 20px;
   border-radius: 28px;
   background-color: ${theme.colors.secondaryBg};

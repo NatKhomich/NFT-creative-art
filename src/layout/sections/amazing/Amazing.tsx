@@ -4,17 +4,21 @@ import {Button} from '../../../components/button/Button';
 import {Card} from './card/Card';
 import {Title} from '../../../components/title/Title';
 import {Span} from '../../../components/span/Span';
+import {Container} from '../../../components/container/Container';
 
 
 export const Amazing = () => {
     return (
         <StyledAmazing>
-            <AmazingContent>
-                <Title><Span>Amazing</Span> and Super Unique Art of This <Span>Week</Span> </Title>
-                <Button styleButton='accent'> See All </Button>
-            </AmazingContent>
+            <Container>
+                <AmazingContent>
+                    <Title><Span>Amazing</Span> and Super Unique Art of This <Span>Week</Span> </Title>
+                    <Button styleButton="accent"> See All </Button>
+                </AmazingContent>
 
-            <Card />
+                <Card/>
+
+            </Container>
         </StyledAmazing>
     );
 };
@@ -24,7 +28,19 @@ const StyledAmazing = styled.section`
 
 const AmazingContent = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+
+  & ${Title} {
+    max-width: 600px;
+    flex-shrink: 1;
+  }
+
+  & ${Button} {
+    max-width: 600px;
+    flex-shrink: 0;
+  }
 `
 
 

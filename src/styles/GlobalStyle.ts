@@ -27,6 +27,8 @@ export const GlobalStyle = createGlobalStyle`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+     
+    overflow-x: hidden;
   }
 
   a {
