@@ -7,12 +7,13 @@ import {Button} from '../../../components/button/Button';
 import photo1 from '../../../assets/images/subscribe/subscribe1.webp'
 import photo2 from '../../../assets/images/subscribe/subscribe2.webp'
 import {Span} from '../../../components/span/Span';
+import {Container} from '../../../components/container/Container';
 
 
 export const Subscribe = () => {
     return (
         <StyledSubscribe>
-
+            <Container>
             <SubscribeImage>
                 <Image src={photo1} alt=""/>
                 <Image src={photo2} alt=""/>
@@ -26,10 +27,11 @@ export const Subscribe = () => {
                 </Description>
 
                 <InputButtonBlock>
-                    <Input placeholder='Enter your e-mail'/>
-                    <Button styleButton='accent'>Subscribe</Button>
+                    <Input placeholder="Enter your e-mail"/>
+                    <Button styleButton="accent">Subscribe</Button>
                 </InputButtonBlock>
             </SubscribeContent>
+            </Container>
         </StyledSubscribe>
     );
 };
@@ -47,7 +49,7 @@ const SubscribeImage = styled.div`
 `
 
 const Image = styled.img`
-border-radius: 16px;
+  border-radius: 16px;
 `
 
 const InputButtonBlock = styled.div`

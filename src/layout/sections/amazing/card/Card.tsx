@@ -30,7 +30,7 @@ export const Card = () => {
                                 </Time>
                             </Ending>
 
-                            <Button styleButton='base'> {c.buttonText} </Button>
+                            <Button styleButton='base' width='168px' height='48px'> {c.buttonText} </Button>
                         </div>
                     </Description>
                 </CardItem>
@@ -59,6 +59,7 @@ const CardItem = styled.div`
 
 const Image = styled.img`
 border-radius: 16px;
+  object-fit: cover;
 `
 
 const Description = styled.div`
@@ -75,21 +76,40 @@ const UpperBlock = styled.div`
 `
 
 const TitleCard = styled.h3`
+  font-size: 24px;
+  font-weight: 700;
 
 `
 const Price = styled.span`
-
+  font-size: 16px;
+  font-weight: 700;
 `
 
 const IconPriceBlock = styled.div`
-
+  display: flex;
+  align-items: center;
 `
 
 const Ending = styled.div`
   display: flex;
   flex-direction: column;
+  
+  & small {
+    color: #838382;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22.40px;
+  }
 `
 
 const Time = styled.div`
-
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  
+& span {
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 12px;
+}
 `

@@ -20,55 +20,54 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-            <GridContainer>
-                <GridItem>
-                    <Title>
-                        Discover and Collect The Best NFTs <span>Digital Art.</span>
-                    </Title>
-                    <Description>
-                        Get started with the easiest and most secure platform to buy and trade digital ART and NFT’s.
-                        Start exploring the world of digital art and NFTs today and take control of your digital assets
-                        with confidence!
-                    </Description>
+                <GridContainer>
+                    <GridItem>
+                        <Title>
+                            Discover and Collect The Best NFTs <span>Digital Art.</span>
+                        </Title>
+                        <Description>
+                            Get started with the easiest and most secure platform to buy and trade digital ART and
+                            NFT’s.
+                            Start exploring the world of digital art and NFTs today and take control of your digital
+                            assets
+                            with confidence!
+                        </Description>
+                        <LinkBlock>
+                            <Button as={'a'} styleButton="accent" width="178px" height="52px">Explore Now</Button>
+                            <InfoLink href="#">Learn More</InfoLink>
+                        </LinkBlock>
+                    </GridItem>
 
-                    <LinkBlock>
-                        <Button as={'a'} styleButton='accent' width='178px' height='52px'>Explore Now</Button>
-                        <InfoLink href="#">Learn More</InfoLink>
-                    </LinkBlock>
-                </GridItem>
+                    <GridItem>
+                        <CardImageContainer>
+                            <Image src={mainImage} alt="image-info"/>
+                            <MainCard>
+                                <CardItemGroup>
+                                    <CardItem>
+                                        <span>Ends in</span>
+                                        <small>05:45:47</small>
+                                    </CardItem>
 
-                <GridItem>
-                    <Image src={mainImage} alt="image-info"/>
-                    {/*<img src={group} alt=''/>*/}
-                    {/*<img src={star} alt=''/>*/}
-                    <MainCard>
-                        <CardItemGroup>
-                            <CardItem>
-                                <span>Ends in</span>
-                                <small>05:45:47</small>
-                            </CardItem>
+                                    <CardItem>
+                                        <span>Current bid</span>
+                                        <small> 0.24ETH</small>
+                                    </CardItem>
+                                </CardItemGroup>
+                                <CardButtonGroup>
+                                    <Button styleButton="base" width="264px" height="52px"> Place A Bid </Button>
+                                </CardButtonGroup>
+                            </MainCard>
+                        </CardImageContainer>
+                    </GridItem>
 
-                            <CardItem>
-                                <span>Current bid</span>
-                                <small> 0.24ETH</small>
-                            </CardItem>
-                        </CardItemGroup>
-                        <CardButtonGroup>
-                            <Button styleButton='base' width='264px' height='52px'> Place A Bid </Button>
-                        </CardButtonGroup>
-
-                    </MainCard>
-                </GridItem>
-
-                <GridItem>
-                    {statisticsItem.map((el, index) => (<Statistics key={index}>
-                            <span> <Span>{el.data}</Span><span>{el.small}</span></span>
-                            <Text>{el.text}</Text>
-                        </Statistics>
-                    ))}
-                </GridItem>
-
-            </GridContainer>
+                    <GridItem>
+                        {statisticsItem.map((el, index) => (<Statistics key={index}>
+                                <span> <Span>{el.data}</Span><span>{el.small}</span></span>
+                                <Text>{el.text}</Text>
+                            </Statistics>
+                        ))}
+                    </GridItem>
+                </GridContainer>
             </Container>
         </StyledMain>
     );
@@ -81,15 +80,13 @@ const StyledMain = styled.section`
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: 544px 1fr;
-  grid-template-rows: 457px 92px;
-  column-gap: 150px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 0.2fr;
   row-gap: 50px;
-  
+
   justify-content: center;
   align-content: center;
 
-  min-height: 575px;
 `
 
 const GridItem = styled.div`
@@ -97,38 +94,21 @@ const GridItem = styled.div`
 
   &:first-child {
     grid-area: 1/1/2/2;
-    background-color: rgba(252, 216, 216, 0.22);
-    min-height: 420px;
+    background-color: rgba(245, 70, 70, 0.8);
     margin-top: 20px;
+    align-self: center;
   }
 
   &:nth-child(2) {
     grid-area: 1/2/3/3;
-    background-color: rgba(142, 147, 142, 0.56);
+    background-color: rgba(24, 101, 215, 0.56);
     margin-left: 92px;
-    position: relative;
 
-    &::before {
-      content: url(${group});
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      left: -60px;
-      top: 200px;
-      z-index: 2;
-    }
-
-    &::after {
-      content: url(${star});
-      position: absolute;
-      left: 8px;
-      top: 268px;
-    }
   }
 
   &:last-child {
     grid-area: 2/1/3/2;
-    background-color: rgba(165, 170, 215, 0.59);
+    background-color: rgba(105, 23, 136, 0.59);
     display: flex;
     justify-content: space-between;
   }
@@ -139,12 +119,11 @@ const Title = styled.h1`
   font-size: 64px;
   font-weight: 600;
   word-wrap: break-word;
-  
+
   span {
     color: ${theme.colors.accent};
     font-size: 64px;
     font-weight: 700;
-
   }
 `
 
@@ -154,8 +133,30 @@ const LinkBlock = styled.div`
 `
 
 //item-2
+const CardImageContainer = styled.div`
+  position: relative;
+
+  &::before {
+    content: url(${group});
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -60px;
+    top: 200px;
+    z-index: 2;
+  }
+
+  &::after {
+    content: url(${star});
+    position: absolute;
+    left: 8px;
+    top: 268px;
+  }
+`
+
 const Image = styled.img`
   border-radius: 24px;
+  object-fit: cover;
 `
 
 const MainCard = styled.div`
@@ -166,10 +167,10 @@ const MainCard = styled.div`
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  
+
   position: absolute;
-  bottom: -40px;
-  right: 0;
+  bottom: -80px;
+  right: -4px;
 `
 
 const CardItemGroup = styled.div`
@@ -180,7 +181,7 @@ const CardItemGroup = styled.div`
 const CardItem = styled.div`
   display: flex;
   flex-direction: column;
-  
+
   & span {
     font-size: 16px;
     font-weight: 400;
@@ -209,14 +210,14 @@ const Statistics = styled.div`
 
   display: flex;
   flex-direction: column;
-  
+
   position: relative;
-  
+
   & span {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 
-  &+&::before {
+  & + &::before {
     content: '';
     display: inline-block;
     background-color: ${theme.colors.accent};
@@ -228,11 +229,10 @@ const Statistics = styled.div`
     left: -94px;
     z-index: 2;
   }
-  
+
   &:last-child {
-  margin-right: 24px;
+    margin-right: 24px;
   }
-  
 `
 
 const Text = styled.span`

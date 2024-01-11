@@ -15,6 +15,7 @@ import cristioAvatar from '../../../assets/images/popular/avatar/cristioAvatar.p
 import sebastianAvatar from '../../../assets/images/popular/avatar/sebastianAvatar.png'
 import abrahamAvatar from '../../../assets/images/popular/avatar/abrahamAvatar.png'
 import {Span} from '../../../components/span/Span';
+import {Container} from '../../../components/container/Container';
 
 
 type PopularData = {
@@ -66,6 +67,7 @@ const popularData: PopularData[] = [
 export const Popular = () => {
     return (
         <StyledPopular>
+            <Container>
             <PopularContent>
                 <Title>Popular <Span>Artists</Span> On This Week</Title>
                 <Button styleButton="accent">See All</Button>
@@ -89,6 +91,7 @@ export const Popular = () => {
                 </GridContainer>
 
             </ArtistImage>
+            </Container>
         </StyledPopular>
     );
 };
@@ -101,8 +104,6 @@ const StyledPopular = styled.section`
 const PopularContent = styled.div`
   display: flex;
 `
-
-
 
 const ArtistImage = styled.div`
 

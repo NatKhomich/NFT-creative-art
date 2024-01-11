@@ -13,11 +13,9 @@ export const Amazing = () => {
             <Container>
                 <AmazingContent>
                     <Title><Span>Amazing</Span> and Super Unique Art of This <Span>Week</Span> </Title>
-                    <Button styleButton="accent"> See All </Button>
+                    <Button styleButton="accent" width='134px' height='52px'> See All </Button>
                 </AmazingContent>
-
                 <Card/>
-
             </Container>
         </StyledAmazing>
     );
@@ -30,6 +28,7 @@ const AmazingContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: wrap;
   
 
   & ${Title} {

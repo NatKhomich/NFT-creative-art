@@ -7,10 +7,12 @@ import imageTwo from '../../../assets/images/best/create2.webp'
 import {Title} from '../../../components/title/Title';
 import {Description} from '../../../components/description/Description';
 import {Span} from '../../../components/span/Span';
+import {Container} from '../../../components/container/Container';
 
 export const Best = () => {
     return (
         <StyledBest>
+            <Container>
             <BestContent>
                 <Title>Create And Sell Your <Span>Best NFTs</Span> </Title>
                 <Description>
@@ -28,6 +30,7 @@ export const Best = () => {
                 <ImageOne src={imageOne} alt="image-one"/>
                 <ImageTwo src={imageTwo} alt="image-two"/>
             </BestImage>
+            </Container>
         </StyledBest>
     );
 };

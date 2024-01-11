@@ -4,59 +4,61 @@ import {Logo} from '../../components/logo/Logo';
 import {Description} from '../../components/description/Description';
 import {Icon} from '../../components/icon/Icon';
 import {dataLink} from './data/footerData';
+import {Container} from '../../components/container/Container';
 
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            <Content>
+            <Container>
+                <Content>
+                    <Information>
+                        <Logo/>
+                        <Description>
+                            Discover NFTs by category, track the latest drop, and and follow the collections you love.
+                            Enjoy
+                            it!
+                        </Description>
+                        <SocialIcon>
+                            <Icon iconId="facebook"/>
+                            <Icon iconId="telegram"/>
+                            <Icon iconId="twitter"/>
+                            <Icon iconId="linkedin"/>
+                        </SocialIcon>
+                    </Information>
 
-                <Information>
-                    <Logo/>
-                    <Description>
-                        Discover NFTs by category, track the latest drop, and and follow the collections you love. Enjoy
-                        it!
-                    </Description>
-                    <SocialIcon>
-                        <Icon iconId="facebook"/>
-                        <Icon iconId="telegram"/>
-                        <Icon iconId="twitter"/>
-                        <Icon iconId="linkedin"/>
-                    </SocialIcon>
-                </Information>
+                    <LinkList>
+                        {dataLink.map(el => (
+                            <div key={el.id}>
+                                <ListTitle>{el.title}</ListTitle>
+                                <NavList>
+                                    <ul>
+                                        {el.items.map((i, index) => (
+                                            <ListItem key={index}>
+                                                <a href="#">{i}</a>
+                                            </ListItem>
+                                        ))}
 
-                <LinkList>
-                    {dataLink.map(el => (
-                        <div key={el.id}>
-                            <ListTitle>{el.title}</ListTitle>
-                            <NavList>
-                                <ul>
-                                    {el.items.map((i, index) => (
-                                        <ListItem key={index}>
-                                            <a href="#">{i}</a>
-                                        </ListItem>
-                                    ))}
+                                    </ul>
+                                </NavList>
+                            </div>
+                        ))}
+                    </LinkList>
 
-                                </ul>
-                            </NavList>
-                        </div>
-                    ))}
-                </LinkList>
+                </Content>
 
-            </Content>
+                <Small>
+                    <Copyright>
+                        Copyright 2024 - Creativeart
+                    </Copyright>
 
-            <Small>
-                <Copyright>
-                    Copyright 2024 - Creativeart
-                </Copyright>
+                    <Copyright>
+                        Privacy Policy
+                        Terms & Conditions
+                    </Copyright>
 
-                <Copyright>
-                    Privacy Policy
-                    Terms & Conditions
-                </Copyright>
-
-            </Small>
-
+                </Small>
+            </Container>
         </StyledFooter>
     );
 };
@@ -64,12 +66,11 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
-  max-width: 1590px;
   width: 100%;
 `
 
 const Content = styled.div`
-display: flex;
+  display: flex;
   justify-content: space-between;
 `
 
