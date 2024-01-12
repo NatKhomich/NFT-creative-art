@@ -11,7 +11,7 @@ import sebastianAvatar from '../../../../assets/images/popular/avatar/sebastianA
 import abrahamAvatar from '../../../../assets/images/popular/avatar/abrahamAvatar.png'
 
 
-type PopularData = {
+type Data = {
     id: number
     image: string
     nick: string
@@ -19,7 +19,7 @@ type PopularData = {
     avatar: string
 }
 
-export const popularData: PopularData[] = [
+export const popularData: Data[] = [
     {
         id: 1,
         image: osvaldo,

@@ -40,9 +40,11 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
-  section {
-    padding: 100px 0;
+  section, footer {
+    padding: 92px 0;
   }
+  
+  
 
   button {
     border: none;

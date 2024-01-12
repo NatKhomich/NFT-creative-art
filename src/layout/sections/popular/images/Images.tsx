@@ -1,8 +1,8 @@
 import React from 'react';
-import {popularData} from '../popularData/popularData';
+import {popularData} from '../data/data';
 import styled from 'styled-components';
 
-export const PopularImage = () => {
+export const Images = () => {
     return (
         <PopularImageStyles>
             <GridContainer>
@@ -22,9 +22,7 @@ export const PopularImage = () => {
     );
 };
 
-const PopularImageStyles = styled.div`
-
-`
+const PopularImageStyles = styled.div``
 
 const GridContainer = styled.div`
   display: grid;
@@ -39,7 +37,7 @@ const GridItem = styled.div<{ image: string }>`
 
   background-size: cover;
   background: url(${props => props.image}) no-repeat top;
-  border-radius: 16px;
+  border-radius: 18px;
 
   &:first-child {
     grid-area: 1/1/1/4;
@@ -59,7 +57,6 @@ const GridItem = styled.div<{ image: string }>`
 
   &:last-child {
     grid-area: 1/9/3/13;
-
   }
 `
 

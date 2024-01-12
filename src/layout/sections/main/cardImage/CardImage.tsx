@@ -6,9 +6,9 @@ import group from '../../../../assets/images/main/group.webp'
 import star from '../../../../assets/images/main/Star 1.png'
 import mainImage from '../../../../assets/images/main/main.webp'
 
-export const CardImageContainer = () => {
+export const CardImage = () => {
     return (
-        <MainContainer>
+        <StyledCardImage>
             <ImageBlock />
             <MainCard>
                 <CardItemGroup>
@@ -26,11 +26,11 @@ export const CardImageContainer = () => {
                     <Button styleButton="base" width="264px" height="52px"> Place A Bid </Button>
                 </CardButtonGroup>
             </MainCard>
-        </MainContainer>
+        </StyledCardImage>
     );
 };
 
-const MainContainer = styled.div`
+const StyledCardImage = styled.div`
   position: relative;
 
   &::before {
@@ -52,11 +52,10 @@ const MainContainer = styled.div`
 `
 
 const ImageBlock = styled.div`
-  
   background: url(${mainImage}) no-repeat top;
   max-width: 464px;
   height: 544px;
-  border-radius: 24px;
+  border-radius: 26px;
 `
 
 const MainCard = styled.div`

@@ -5,7 +5,7 @@ import {InfoLink} from '../../../../components/infoLink/InfoLink';
 import styled from 'styled-components';
 import {theme} from '../../../../styles/Theme';
 
-export const MainContent = () => {
+export const Content = () => {
     return (
         <>
             <Title>

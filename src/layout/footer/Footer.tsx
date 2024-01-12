@@ -75,7 +75,7 @@ const Content = styled.div`
 `
 
 const Information = styled.div`
-
+max-width: 276px;
 `
 
 const SocialIcon = styled.div`

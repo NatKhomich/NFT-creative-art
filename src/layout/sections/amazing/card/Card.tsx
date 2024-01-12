@@ -58,7 +58,7 @@ const CardItem = styled.div`
 `
 
 const Image = styled.img`
-border-radius: 16px;
+border-radius: 18px;
   object-fit: cover;
 `
 

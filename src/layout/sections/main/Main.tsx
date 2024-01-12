@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Container} from '../../../components/container/Container';
-import {MainContent} from './mainContent/MainContent';
-import {CardImageContainer} from './cardImageContainer/CardImageContainer';
+import {Content} from './content/Content';
+import {CardImage} from './cardImage/CardImage';
 import {Statistics} from './statistics/Statistics';
 
 
@@ -12,11 +12,11 @@ export const Main = () => {
             <Container>
                 <GridContainer>
                     <GridItem>
-                        <MainContent/>
+                        <Content/>
                     </GridItem>
 
                     <GridItem>
-                        <CardImageContainer/>
+                        <CardImage/>
                     </GridItem>
 
                     <GridItem>
@@ -41,7 +41,6 @@ const GridContainer = styled.div`
 
   justify-content: center;
   align-content: center;
-
 `
 
 const GridItem = styled.div`
@@ -58,7 +57,6 @@ const GridItem = styled.div`
     grid-area: 1/2/3/3;
     background-color: rgba(215, 199, 24, 0.56);
     margin-left: 92px;
-
   }
 
   &:last-child {
