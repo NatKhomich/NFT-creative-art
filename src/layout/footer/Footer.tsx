@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Logo} from '../../components/logo/Logo';
-import {Description} from '../../components/description/Description';
-import {Icon} from '../../components/icon/Icon';
-import {dataLink} from './data/footerData';
 import {Container} from '../../components/container/Container';
+import {Information} from './information/Information';
+import {LinkList} from './linkList/LinkList';
+import {Copyright} from './copyright/Copyright';
 
 
 export const Footer = () => {
@@ -12,52 +11,11 @@ export const Footer = () => {
         <StyledFooter>
             <Container>
                 <Content>
-                    <Information>
-                        <Logo/>
-                        <Description>
-                            Discover NFTs by category, track the latest drop, and and follow the collections you love.
-                            Enjoy
-                            it!
-                        </Description>
-                        <SocialIcon>
-                            <Icon iconId="facebook"/>
-                            <Icon iconId="telegram"/>
-                            <Icon iconId="twitter"/>
-                            <Icon iconId="linkedin"/>
-                        </SocialIcon>
-                    </Information>
-
-                    <LinkList>
-                        {dataLink.map(el => (
-                            <div key={el.id}>
-                                <ListTitle>{el.title}</ListTitle>
-                                <NavList>
-                                    <ul>
-                                        {el.items.map((i, index) => (
-                                            <ListItem key={index}>
-                                                <a href="#">{i}</a>
-                                            </ListItem>
-                                        ))}
-
-                                    </ul>
-                                </NavList>
-                            </div>
-                        ))}
-                    </LinkList>
-
+                    <Information/>
+                    <LinkList/>
                 </Content>
 
-                <Small>
-                    <Copyright>
-                        Copyright 2024 - Creativeart
-                    </Copyright>
-
-                    <Copyright>
-                        Privacy Policy
-                        Terms & Conditions
-                    </Copyright>
-
-                </Small>
+                <Copyright/>
             </Container>
         </StyledFooter>
     );
@@ -72,34 +30,18 @@ const StyledFooter = styled.footer`
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  
+  &::before {
+    content: '';
+    display: inline-block;
+    background-color: #777676;
+    height: 1px;
+    position: absolute;
+    bottom: -48px;
+    left: 0;
+    right: 0;
+  }
 `
 
-const Information = styled.div`
-max-width: 276px;
-`
-
-const SocialIcon = styled.div`
-
-`
-
-const LinkList = styled.div`
-  display: flex;
-`
-
-const ListTitle = styled.h3`
-
-`
-
-const NavList = styled.nav``
-
-const ListItem = styled.li``
-
-const Small = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-`
-
-const Copyright = styled.small`
-  display: inline-block;
-`
