@@ -18,7 +18,7 @@ export const Button = styled.button<Props>`
   font-size: 16px;
 
   width: ${props => props.width || '150px'};
-  height: ${props => props.height || '50px'};
+  height: ${props => props.height || '52px'};
 
   background-color: ${props => props.styleButton || 'transparent'};
 

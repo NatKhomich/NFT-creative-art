@@ -14,24 +14,25 @@ export const Best = () => {
     return (
         <StyledBest>
             <Container>
-                <FlexWrapper justify='space-between' wrap='wrap'>
-            <BestContent>
-                <Title>Create And Sell Your <Span>Best NFTs</Span> </Title>
-                <Description>
-                    Start exploring the world of digital art and NFTs today and take control of your digital assets with
-                    confidence!
-                </Description>
+                <FlexWrapper justify="space-between" wrap="wrap" align="center">
+                    <BestContent>
+                        <Title>Create And Sell Your <Span>Best NFTs</Span> </Title>
+                        <Description>
+                            Start exploring the world of digital art and NFTs today and take control of your digital
+                            assets with
+                            confidence!
+                        </Description>
 
-                <LinkBlock>
-                    <Button styleButton="accent" width='176px' height='52px'>Create Now</Button>
-                    <InfoLink href="#">Learn More</InfoLink>
-                </LinkBlock>
-            </BestContent>
+                        <LinkBlock>
+                            <Button styleButton="accent" width="176px" height="52px">Create Now</Button>
+                            <InfoLink href="#">Learn More</InfoLink>
+                        </LinkBlock>
+                    </BestContent>
 
-            <BestImage>
-                <ImageOne src={imageOne} alt="image-one"/>
-                <ImageTwo src={imageTwo} alt="image-two"/>
-            </BestImage>
+                    <BestImage>
+                        <ImageOne/>
+                        <ImageTwo/>
+                    </BestImage>
 
                 </FlexWrapper>
             </Container>
@@ -40,11 +41,10 @@ export const Best = () => {
 };
 
 const StyledBest = styled.section`
-    height: 100vh;
 `
 
 const BestContent = styled.div`
-max-width: 426px;
+  max-width: 426px;
 `
 
 const LinkBlock = styled.div`
@@ -54,21 +54,35 @@ const LinkBlock = styled.div`
 
 const BestImage = styled.div`
   position: relative;
+  
+  max-width: 740px;
+  width: 100%;
+  height: 559px;
 `
 
-const ImageOne = styled.img`
-  border-radius: 24px;
-  width: 410px;
-  height: 400px;
-  
+const ImageOne = styled.div`
   position: absolute;
-  bottom: -80px;
-  left: -330px;
+  bottom: 0;
+  left: 0;
   
+  background: url(${imageOne}) no-repeat top;
+  border-radius: 24px;
+  max-width: 410px;
+  max-height: 475px;
+  width: 55%;
+  height: 71.5%;
+  z-index: 2;
 `
 
-const ImageTwo = styled.img`
+const ImageTwo = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  background: url(${imageTwo}) no-repeat top;
   border-radius: 24px;
-  width: 410px;
-  height: 475px;
+  max-width: 410px;
+  max-height: 475px;
+  width: 55%;
+  height: 85%;
 `

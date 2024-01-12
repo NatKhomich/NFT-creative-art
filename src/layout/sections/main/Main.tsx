@@ -29,7 +29,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 50px;
 `
 
@@ -56,7 +56,7 @@ const GridItem = styled.div`
 
   &:nth-child(2) {
     grid-area: 1/2/3/3;
-    background-color: rgba(24, 101, 215, 0.56);
+    background-color: rgba(215, 199, 24, 0.56);
     margin-left: 92px;
 
   }
