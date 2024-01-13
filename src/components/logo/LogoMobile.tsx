@@ -1,8 +1,8 @@
-import React from 'react';
+import logo from '../../assets/images/LogoMobile.webp';
 import styled from 'styled-components';
-import logo from '../../assets/images/logo.webp'
+import React from 'react';
 
-export const Logo = () => {
+export const LogoMobile = () => {
     return (
         <a href={''}>
             <StyledLogo src={logo} alt={'creative-art'}/>

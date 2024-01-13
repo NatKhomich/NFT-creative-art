@@ -1,80 +1,30 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Button} from '../../components/button/Button';
-import {Logo} from '../../components/logo/Logo';
+import React, {useEffect} from 'react';
 import {Container} from '../../components/container/Container';
-import {FlexWrapper} from '../../components/flexWrapper/FlexWrapper';
-import {theme} from '../../styles/Theme';
+import {DesktopMenu} from './headerMenu/desktopMenu/DesktopMenu';
+import {MobileMenu} from './headerMenu/mobileMenu/MobileMenu';
+import {S} from './Header_Styles'
 
-const menuItem = ['Marketplace', 'Artists', 'Community', 'Collections']
 
 export const Header = () => {
+
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 820;
+
+    useEffect(() => {
+        window.addEventListener('resize', () => setWidth(window.innerWidth));
+    }, []);
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
-                <FlexWrapper justify="space-between" align="center">
-                    <Logo/>
-                    <StyledMenu>
-                        <ul>
-                            {menuItem.map((item, index) => {
-                                return <MenuItem key={index}>
-                                    <MenuLink href="#">{item}</MenuLink>
-                                </MenuItem>
-                            })}
-                        </ul>
-                    </StyledMenu>
-                    <Button as="a" width="143px" height="48px" styleButton="accent">Contact</Button>
-                </FlexWrapper>
+                {width < breakpoint
+                    ? <MobileMenu/>
+                    : <DesktopMenu/>}
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-  background-color: rgb(0 0 0 /50%);
-  padding: 28px 0;
-  height: 104px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-`
 
-const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-  }
-`
 
-const MenuItem = styled.li`
-  position: relative;
-  
-  &+li {
-    margin-left: 40px;
-  }
 
-`
-
-const MenuLink = styled.a`
-  font-size: 16px;
-  line-height: 26px;
-  
-  &:hover {
-    &::before {
-      height: 2px;
-      transition: .2s;
-    }
-  }
-  
-  &::before {
-    content: '';
-    display: inline-block;
-    background-color: ${theme.colors.accent};
-
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-  }
-`

@@ -42,4 +42,11 @@
 
     </g>
 
+    <g id="close">
+        <rect width="31.9446" height="1.99654" transform="matrix(-0.707106 -0.707107 0.707106 -0.707107 22.5883 24)" fill="white"/>
+        <rect width="31.9446" height="1.99654" transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 22.5881)" fill="white"/>
+    </g>
+
+
+
 </svg>

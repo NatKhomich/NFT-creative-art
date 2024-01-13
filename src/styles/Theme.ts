@@ -8,6 +8,12 @@ export const theme = {
 
     },
     media: {
+        main: {
+            medium: 'screen and (max-width: 900px)',
+        },
+
+        large: 'screen and (max-width: 1213px)',
+
         tablet: 'screen and (max-width: 768px)',
         mobile: 'screen and (max-width: 576px)',
     },
