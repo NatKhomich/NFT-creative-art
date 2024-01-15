@@ -13,7 +13,6 @@ const Header = styled.header<{isScrolled: boolean}>`
    ${props => props.isScrolled && css<{isScrolled: boolean}>`
      background-color: rgba(0, 0, 0, 0.41);
 `}
-  
 `
 
 export const S = {

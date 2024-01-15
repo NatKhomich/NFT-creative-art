@@ -5,11 +5,15 @@ import {theme} from '../../../../styles/Theme';
 import group from '../../../../assets/images/main/group.webp'
 import star from '../../../../assets/images/main/Star 1.png'
 import mainImage from '../../../../assets/images/main/main.webp'
+import mainSmall from '../../../../assets/images/main/mainSmall.webp'
 
 export const CardImage = () => {
     return (
         <StyledCardImage>
-            <ImageBlock />
+            <ImageBlock>
+                {/*<Image src={mainImage} alt='' />*/}
+
+            </ImageBlock>
             <MainCard>
                 <CardItemGroup>
                     <CardItem>
@@ -54,12 +58,21 @@ const StyledCardImage = styled.div`
 const ImageBlock = styled.div`
   background: url(${mainImage}) no-repeat top;
   max-width: 464px;
+  width: 100%;
   height: 544px;
   border-radius: 26px;
+
+  @media ${theme.media.mobile} {
+    max-width: 294px;
+    height: 344px;
+    width: 100%;
+    background: url(${mainSmall}) no-repeat top;
+  }
 `
 
 const MainCard = styled.div`
-  width: 304px;
+  max-width: 304px;
+  width: 100%;
   min-height: 170px;
   padding: 20px;
   background-color: ${theme.colors.secondaryBg};
@@ -68,8 +81,22 @@ const MainCard = styled.div`
   flex-direction: column;
 
   position: absolute;
-  bottom: -80px;
-  right: -4px;
+  bottom: -70px;
+  right: 0;
+
+  @media ${theme.media.medium} {
+    right: -30px;
+  }
+
+  @media ${theme.media.mobile} {
+    max-width: 224px;
+    width: 100%;
+    min-height: 137px;
+    padding: 12px;
+    
+    bottom: -80px;
+    right: 100px;
+  }
 `
 
 const CardItemGroup = styled.div`
@@ -91,6 +118,11 @@ const CardItem = styled.div`
     font-size: 16px;
     font-weight: 700;
     margin: 10px 0 20px;
+
+    @media ${theme.media.mobile} {
+      margin: 10px 0 12px;
+    }
+    
   }
 `
 

@@ -11,7 +11,7 @@ export const theme = {
         large: 'screen and (max-width: 1213px)',
         medium: 'screen and (max-width: 900px)',
         tablet: 'screen and (max-width: 768px)',
-        mobile: 'screen and (max-width: 576px)',
+        mobile: 'screen and (max-width: 586px)',
     },
     animations: {
         transition: '.2s ease-in-out',

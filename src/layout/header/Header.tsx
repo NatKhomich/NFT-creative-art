@@ -10,13 +10,12 @@ import {useWindowScroll} from '../../hooks/useWindowScroll';
 export const  Header = () => {
 
     const {isScrolled} = useWindowScroll()
-    const {width} = useWindowWidth()
-    const breakpoint = 820;
+    const width = useWindowWidth()
 
     return (
         <S.Header isScrolled={isScrolled}>
             <Container>
-                {width < breakpoint
+                {width
                     ? <MobileMenu/>
                     : <DesktopMenu/>}
             </Container>
