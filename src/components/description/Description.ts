@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {theme} from '../../styles/Theme';
 
 export const Description = styled.p`
   font-size: 16px;
@@ -6,4 +7,8 @@ export const Description = styled.p`
   line-height: 26px;
   word-wrap: break-word;
   margin: 20px 0 40px;
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 32px;
+  }
 `

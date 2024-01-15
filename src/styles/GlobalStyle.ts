@@ -42,9 +42,11 @@ export const GlobalStyle = createGlobalStyle`
 
   section, footer {
     padding: 92px 0;
+
+    // @media ${theme.media.mobile} {
+    //   padding: 40px 0;
+    // }
   }
-  
-  
 
   button {
     border: none;

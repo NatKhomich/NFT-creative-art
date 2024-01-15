@@ -6,14 +6,13 @@ import group from '../../../../assets/images/main/group.webp'
 import star from '../../../../assets/images/main/Star 1.png'
 import mainImage from '../../../../assets/images/main/main.webp'
 import mainSmall from '../../../../assets/images/main/mainSmall.webp'
+import starMobile from '../../../../assets/images/main/starMobile.png'
+import groupMobile from '../../../../assets/images/main/groupMobile.webp'
 
 export const CardImage = () => {
     return (
         <StyledCardImage>
-            <ImageBlock>
-                {/*<Image src={mainImage} alt='' />*/}
-
-            </ImageBlock>
+            <ImageBlock/>
             <MainCard>
                 <CardItemGroup>
                     <CardItem>
@@ -45,6 +44,15 @@ const StyledCardImage = styled.div`
     left: -60px;
     top: 200px;
     z-index: 2;
+
+    @media ${theme.media.mobile} {
+      content: url(${groupMobile});
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      left: -30px;
+      top: 160px;
+    }
   }
 
   &::after {
@@ -52,6 +60,13 @@ const StyledCardImage = styled.div`
     position: absolute;
     left: 8px;
     top: 268px;
+
+    @media ${theme.media.mobile} {
+      content: url(${starMobile});
+      position: absolute;
+      left: 0;
+      top: 190px;
+    }
   }
 `
 
@@ -61,6 +76,12 @@ const ImageBlock = styled.div`
   width: 100%;
   height: 544px;
   border-radius: 26px;
+
+  @media ${theme.media.medium} {
+    max-width: 380px;
+    height: 444px;
+    width: 100%;
+  }
 
   @media ${theme.media.mobile} {
     max-width: 294px;
@@ -85,7 +106,10 @@ const MainCard = styled.div`
   right: 0;
 
   @media ${theme.media.medium} {
-    right: -30px;
+    right: 0;
+    max-width: 254px;
+    width: 100%;
+    min-height: 137px;
   }
 
   @media ${theme.media.mobile} {
@@ -94,8 +118,8 @@ const MainCard = styled.div`
     min-height: 137px;
     padding: 12px;
     
-    bottom: -80px;
-    right: 100px;
+    bottom: -70px;
+    right: -20px;
   }
 `
 

@@ -55,4 +55,8 @@ const Title = styled.h1`
 const LinkBlock = styled.div`
   display: flex;
   align-items: center;
+
+  @media ${theme.media.medium} {
+    justify-content: center;
+  }
 `

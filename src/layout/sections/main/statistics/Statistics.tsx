@@ -18,18 +18,14 @@ export const Statistics = () => {
 };
 
 const StatisticsStyled = styled.div`
+  position: relative;
+  
   font-size: 48px;
   font-family: Spectral, sans-serif;
   font-weight: 500;
 
   display: flex;
   flex-direction: column;
-
-  position: relative;
-
-  & span {
-    margin-bottom: 10px;
-  }
 
   &::before {
     content: '';
@@ -38,7 +34,7 @@ const StatisticsStyled = styled.div`
 
     position: absolute;
     width: 2px;
-    height: 80px;
+    height: 100%;
     top: 0;
     right: -20px;
     z-index: 2;
@@ -46,6 +42,14 @@ const StatisticsStyled = styled.div`
 
   &:last-child {
     margin-right: 34px;
+  }
+
+  @media ${theme.media.medium} {
+    font-size: 40px;
+  }
+  
+  @media ${theme.media.mobile} {
+    font-size: 30px;
   }
 `
 
