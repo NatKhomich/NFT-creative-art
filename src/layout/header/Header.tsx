@@ -1,21 +1,20 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Container} from '../../components/container/Container';
 import {DesktopMenu} from './headerMenu/desktopMenu/DesktopMenu';
 import {MobileMenu} from './headerMenu/mobileMenu/MobileMenu';
 import {S} from './Header_Styles'
+import {useWindowWidth} from '../../hooks/useWindowWidth';
+import {useWindowScroll} from '../../hooks/useWindowScroll';
 
 
-export const Header = () => {
+export const  Header = () => {
 
-    const [width, setWidth] = React.useState(window.innerWidth);
+    const {isScrolled} = useWindowScroll()
+    const {width} = useWindowWidth()
     const breakpoint = 820;
 
-    useEffect(() => {
-        window.addEventListener('resize', () => setWidth(window.innerWidth));
-    }, []);
-
     return (
-        <S.Header>
+        <S.Header isScrolled={isScrolled}>
             <Container>
                 {width < breakpoint
                     ? <MobileMenu/>
