@@ -84,7 +84,7 @@ const ImageBlock = styled.div`
   }
 
   @media ${theme.media.mobile} {
-    max-width: 294px;
+    max-width: 280px;
     height: 344px;
     width: 100%;
     background: url(${mainSmall}) no-repeat top;
@@ -106,7 +106,7 @@ const MainCard = styled.div`
   right: 0;
 
   @media ${theme.media.medium} {
-    right: 0;
+    right: 20px;
     max-width: 254px;
     width: 100%;
     min-height: 137px;
@@ -119,7 +119,7 @@ const MainCard = styled.div`
     padding: 12px;
     
     bottom: -70px;
-    right: -20px;
+    right: 0;
   }
 `
 

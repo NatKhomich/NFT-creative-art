@@ -6,4 +6,12 @@ export const Span = styled.span`
   color: ${theme.colors.accent};
   font-size: 48px;
   font-weight: 500;
+
+  @media ${theme.media.medium} {
+    font-size: 40px;
+  }
+
+  @media ${theme.media.mobile} {
+    font-size: 30px;
+  }
 `

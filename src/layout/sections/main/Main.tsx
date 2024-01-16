@@ -6,7 +6,6 @@ import {CardImage} from './cardImage/CardImage';
 import {Statistics} from './statistics/Statistics';
 import {theme} from '../../../styles/Theme';
 
-
 export const Main = () => {
     return (
         <StyledMain>
@@ -30,7 +29,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  //min-height: 90vh;
+  //min-height: 100vh;
   margin-top: 70px;
 
   @media ${theme.media.medium} {

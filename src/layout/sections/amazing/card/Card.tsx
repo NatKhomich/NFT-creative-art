@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import {theme} from '../../../../styles/Theme';
 import {cardsData} from '../cardsData/cardsData';
 
-
 export const Card = () => {
     return (
         <StyledCard>
@@ -46,6 +45,10 @@ const StyledCard = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 64px;
+
+  @media ${theme.media.mobile} {
+    margin-top: 32px;
+  }
 `
 
 
@@ -55,11 +58,17 @@ const CardItem = styled.div`
   border-radius: 28px;
   background-color: ${theme.colors.secondaryBg};
   margin: 5px;
+
+  @media ${theme.media.mobile} {
+    max-width: 343px;
+    padding: 16px;
+  }
 `
 
 const Image = styled.img`
-border-radius: 18px;
+  border-radius: 18px;
   object-fit: cover;
+  max-width: 100%;
 `
 
 const Description = styled.div`
@@ -78,6 +87,10 @@ const UpperBlock = styled.div`
 const TitleCard = styled.h3`
   font-size: 24px;
   font-weight: 700;
+
+  @media ${theme.media.mobile} {
+    font-size: 18px;
+  }
 
 `
 const Price = styled.span`
@@ -98,7 +111,6 @@ const Ending = styled.div`
     color: #838382;
     font-size: 14px;
     font-weight: 400;
-    line-height: 22.40px;
   }
 `
 
@@ -110,6 +122,6 @@ const Time = styled.div`
 & span {
   font-size: 16px;
   font-weight: 700;
-  margin-left: 12px;
+  margin-left: 10px;
 }
 `

@@ -36,6 +36,7 @@ const Title = styled.h1`
   font-size: 64px;
   font-weight: 600;
   word-wrap: break-word;
+  line-height: 76px;
 
   & span {
     color: ${theme.colors.accent};
@@ -44,6 +45,7 @@ const Title = styled.h1`
 
   @media ${theme.media.medium} {
     font-size: 48px;
+    line-height: 46px;
   }
 
   @media ${theme.media.mobile} {

@@ -3,6 +3,7 @@ import {Title} from '../../../../components/title/Title';
 import {Span} from '../../../../components/span/Span';
 import {Button} from '../../../../components/button/Button';
 import styled from 'styled-components';
+import {theme} from '../../../../styles/Theme';
 
 export const Content = () => {
     return (
@@ -20,8 +21,7 @@ const StyledContent = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-
-
+  
   & ${Title} {
     max-width: 600px;
     flex-shrink: 1;
@@ -30,5 +30,13 @@ const StyledContent = styled.div`
   & ${Button} {
     max-width: 600px;
     flex-shrink: 0;
+
+    @media ${theme.media.medium} {
+      margin-top: 32px;
+    }
+  }
+
+  @media ${theme.media.medium} {
+    justify-content: center;
   }
 `
