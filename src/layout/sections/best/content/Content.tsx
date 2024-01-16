@@ -5,6 +5,7 @@ import {Description} from '../../../../components/description/Description';
 import {Button} from '../../../../components/button/Button';
 import {InfoLink} from '../../../../components/infoLink/InfoLink';
 import styled from 'styled-components';
+import {theme} from '../../../../styles/Theme';
 
 export const Content = () => {
     return (
@@ -31,4 +32,5 @@ const StyledContent = styled.div`
 const LinkBlock = styled.div`
   display: flex;
   align-items: center;
+  
 `
