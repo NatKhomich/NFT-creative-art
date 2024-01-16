@@ -11,7 +11,7 @@ import {Footer} from './layout/footer/Footer';
 function App() {
     return (
         <>
-            <Header/>
+            <Header />
             <Main/>
             <Amazing/>
             <Best/>

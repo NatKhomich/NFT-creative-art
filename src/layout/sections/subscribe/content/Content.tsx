@@ -41,6 +41,18 @@ const Form = styled.div`
   border-radius: 16px;
   width: 100%;
   padding: 5px 5px;
+
+  @media ${theme.media.mobile} {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    background-color: transparent;
+
+    & Button {
+      width: 160px;
+      height: 52px;
+    }
+  }
 `
 
 const Input = styled.input`
@@ -61,5 +73,12 @@ const Input = styled.input`
   &:focus-visible {
     outline: ${theme.colors.secondaryBg} solid 1px;
     border-bottom: 1px solid #4f4d4d;
+  }
+
+  @media ${theme.media.mobile} {
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    padding: 0 24px;
   }
 `

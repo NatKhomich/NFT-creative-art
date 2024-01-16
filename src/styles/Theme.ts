@@ -8,6 +8,7 @@ export const theme = {
 
     },
     media: {
+        subscribeReset: 'screen and (max-width: 1246px)',
         large: 'screen and (max-width: 1213px)',
         extraMedium: 'screen and (max-width: 1000px)',
         medium: 'screen and (max-width: 900px)',

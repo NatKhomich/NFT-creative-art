@@ -33,7 +33,7 @@ const StyledMain = styled.section`
   margin-top: 70px;
 
   @media ${theme.media.medium} {
-    margin-top: 20px;
+    //margin-top: 40px;
   }
 `
 
