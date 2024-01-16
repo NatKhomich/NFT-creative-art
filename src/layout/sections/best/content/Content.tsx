@@ -27,6 +27,14 @@ export const Content = () => {
 
 const StyledContent = styled.div`
   max-width: 426px;
+
+  @media ${theme.media.large} {
+    margin-bottom: 30px;
+  }
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 0;
+  }
 `
 
 const LinkBlock = styled.div`
