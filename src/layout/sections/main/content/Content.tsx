@@ -29,6 +29,14 @@ export const Content = () => {
 
 const StyledContent = styled.div`
   max-width: 544px;
+
+  @media ${theme.media.medium} {
+    max-width: 600px;
+    
+    & ${Description} {
+      text-align: center;
+    }
+  }
 `
 
 const Title = styled.h1`
@@ -46,6 +54,7 @@ const Title = styled.h1`
   @media ${theme.media.medium} {
     font-size: 48px;
     line-height: 46px;
+    text-align: center;
   }
 
   @media ${theme.media.mobile} {

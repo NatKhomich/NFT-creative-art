@@ -29,12 +29,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  //min-height: 100vh;
   margin-top: 70px;
-
-  @media ${theme.media.medium} {
-    //margin-top: 40px;
-  }
 `
 
 const GridContainer = styled.div`

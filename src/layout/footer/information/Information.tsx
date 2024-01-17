@@ -29,18 +29,30 @@ const StyledInformation = styled.div`
 
   & ${Description} {
     margin: 8px 0 24px;
+    text-align: left;
+  }
+
+  @media ${theme.media.mobile} {
+    & ${Description} {
+      margin: 16px 0 32px;
+    }
   }
 `
 
 const SocialIcon = styled.div`
+  margin-bottom: 48px;
+  
   & svg + svg {
     margin-left: 12px;
   }
 
   & svg:hover {
-    fill: ${theme.colors.accent};
     cursor: pointer;
     transform: ${theme.animations.transform};
+  }
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 48px;
   }
 
 `

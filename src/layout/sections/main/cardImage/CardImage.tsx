@@ -100,6 +100,7 @@ const MainCard = styled.div`
   border-radius: 16px;
   display: flex;
   flex-direction: column;
+  border-top: 1px solid ${theme.colors.accent};
 
   position: absolute;
   bottom: -70px;

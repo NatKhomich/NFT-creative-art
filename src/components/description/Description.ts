@@ -10,5 +10,6 @@ export const Description = styled.p`
 
   @media ${theme.media.mobile} {
     margin-bottom: 32px;
+    text-align: center;
   }
 `

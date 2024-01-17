@@ -1,6 +1,7 @@
 import React from 'react';
 import {dataLink} from '../data/footerData';
 import styled from 'styled-components';
+import {theme} from '../../../styles/Theme';
 
 export const LinkList = () => {
     return (
@@ -28,6 +29,13 @@ const StyledLinkList = styled.div`
   gap: 94px;
   flex-wrap: wrap;
   max-width: 688px;
+
+  margin-bottom: 48px;
+  
+  @media ${theme.media.mobile} {
+    max-width: 150px;
+    gap: 32px;
+  }
 `
 
 const ListTitle = styled.h3`

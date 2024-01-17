@@ -51,13 +51,13 @@ const StyledCard = styled.div`
   }
 `
 
-
 const CardItem = styled.div`
   max-width: 410px;
   padding: 20px;
   border-radius: 28px;
   background-color: ${theme.colors.secondaryBg};
   margin: 5px;
+  border-top: 1px solid ${theme.colors.accent};
 
   @media ${theme.media.mobile} {
     max-width: 343px;

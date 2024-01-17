@@ -11,6 +11,7 @@ export const Title = styled.h2`
   @media ${theme.media.medium} {
     font-size: 40px;
     line-height: 44px;
+    text-align: center;
   }
 
   @media ${theme.media.mobile} {

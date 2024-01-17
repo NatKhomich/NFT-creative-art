@@ -40,5 +40,10 @@ const StyledContent = styled.div`
 const LinkBlock = styled.div`
   display: flex;
   align-items: center;
+
+  @media ${theme.media.mobile} {
+    justify-content: center;
+    margin-bottom: 0;
+  }
   
 `

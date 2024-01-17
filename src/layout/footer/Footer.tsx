@@ -5,7 +5,6 @@ import {Information} from './information/Information';
 import {LinkList} from './linkList/LinkList';
 import {Copyright} from './copyright/Copyright';
 
-
 export const Footer = () => {
     return (
         <StyledFooter>
@@ -39,7 +38,7 @@ const Content = styled.div`
     background-color: #777676;
     height: 1px;
     position: absolute;
-    bottom: -48px;
+    bottom: 0;
     left: 0;
     right: 0;
   }
