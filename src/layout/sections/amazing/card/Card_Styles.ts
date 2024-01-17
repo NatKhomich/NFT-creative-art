@@ -22,6 +22,11 @@ const CardItem = styled.div`
   margin: 5px;
   border-top: 1px solid ${theme.colors.accent};
 
+  &:hover {
+    transition: ${theme.animations.transition};
+    transform: ${theme.animations.transform};
+  }
+
   @media ${theme.media.mobile} {
     max-width: 343px;
     padding: 16px;

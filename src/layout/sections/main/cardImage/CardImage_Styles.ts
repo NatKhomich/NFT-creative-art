@@ -7,6 +7,8 @@ import mainSmall from '../../../../assets/images/main/mainSmall.webp'
 import starMobile from '../../../../assets/images/main/starMobile.png'
 import groupMobile from '../../../../assets/images/main/groupMobile.webp'
 
+
+
 const CardImage = styled.div`
   position: relative;
 
@@ -79,6 +81,11 @@ const MainCard = styled.div`
   position: absolute;
   bottom: -70px;
   right: 0;
+  
+  &:hover {
+    transition: ${theme.animations.transition};
+    transform: ${theme.animations.transform};
+  }
 
   @media ${theme.media.medium} {
     right: 20px;

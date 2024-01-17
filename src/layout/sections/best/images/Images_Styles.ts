@@ -34,6 +34,11 @@ const ImageOne = styled.div`
   height: 71.5%;
   z-index: 2;
 
+  &:hover {
+    transition: ${theme.animations.transition};
+    transform: ${theme.animations.transform};
+  }
+
   @media ${theme.media.mobile} {
     max-width: 190px;
     height: 186px;
@@ -59,6 +64,12 @@ const ImageTwo = styled.div`
     height: 220px;
     width: 100%;
     background: url(${imageTwoMobile}) no-repeat top;
+  }
+
+  &:hover {
+    transition: ${theme.animations.transition};
+    transform: ${theme.animations.transform};
+    z-index: 3;
   }
 `
 
