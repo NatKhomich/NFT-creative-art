@@ -1,46 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
 import {Container} from '../../components/container/Container';
 import {Information} from './information/Information';
 import {LinkList} from './linkList/LinkList';
 import {Copyright} from './copyright/Copyright';
+import {S} from './Footer_Styles'
 
 export const Footer = () => {
     return (
-        <StyledFooter>
+        <S.Footer>
             <Container>
-                <Content>
+                <S.Content>
                     <Information/>
                     <LinkList/>
-                </Content>
+                </S.Content>
 
                 <Copyright/>
             </Container>
-        </StyledFooter>
+        </S.Footer>
     );
 };
 
-const StyledFooter = styled.footer`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`
-
-const Content = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
-  
-  &::before {
-    content: '';
-    display: inline-block;
-    background-color: #777676;
-    height: 1px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-`
 

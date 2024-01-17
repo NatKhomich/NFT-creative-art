@@ -1,23 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
 import {Card} from './card/Card';
 import {Container} from '../../../components/container/Container';
 import {Content} from './content/Content';
+import {S} from './Amazing_Styles'
 
 
 export const Amazing = () => {
     return (
-        <StyledAmazing>
+        <S.Amazing>
             <Container>
                 <Content/>
                 <Card/>
             </Container>
-        </StyledAmazing>
+        </S.Amazing>
     );
 };
 
-const StyledAmazing = styled.section`
-`
+
 
 
 

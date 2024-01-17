@@ -1,59 +1,25 @@
 import React from 'react';
 import {dataLink} from '../data/footerData';
-import styled from 'styled-components';
-import {theme} from '../../../styles/Theme';
+import {S} from '../Footer_Styles'
 
 export const LinkList = () => {
     return (
-        <StyledLinkList>
+        <S.LinkList>
             {dataLink.map(el => (
                 <div key={el.id}>
-                    <ListTitle>{el.title}</ListTitle>
-                    <NavList>
+                    <S.ListTitle>{el.title}</S.ListTitle>
+                    <S.NavList>
                         <ul>
                             {el.items.map((i, index) => (
-                                <ListItem key={index}>
+                                <S.ListItem key={index}>
                                     <a href="#">{i}</a>
-                                </ListItem>
+                                </S.ListItem>
                             ))}
                         </ul>
-                    </NavList>
+                    </S.NavList>
                 </div>
             ))}
-        </StyledLinkList>
+        </S.LinkList>
     );
 };
 
-const StyledLinkList = styled.div`
-  display: flex;
-  gap: 94px;
-  flex-wrap: wrap;
-  max-width: 688px;
-
-  margin-bottom: 48px;
-  
-  @media ${theme.media.mobile} {
-    max-width: 150px;
-    gap: 32px;
-  }
-`
-
-const ListTitle = styled.h3`
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  margin-bottom: 24px;
-`
-
-const NavList = styled.nav``
-
-const ListItem = styled.li`
-  margin-top: 8px;
-
-  & a {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-  }
-
-`

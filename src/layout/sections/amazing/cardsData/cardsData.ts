@@ -2,7 +2,7 @@ import cyberpunkImage from '../../../../assets/images/amazing/cyberpunk.webp';
 import chargeImage from '../../../../assets/images/amazing/charge.webp';
 import surgeonImage from '../../../../assets/images/amazing/surgeon.webp';
 
-type CardsDataProps = {
+export type CardsDataProps = {
     id: string
     image: string
     title: string

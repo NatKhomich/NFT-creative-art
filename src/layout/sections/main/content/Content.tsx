@@ -2,15 +2,15 @@ import React from 'react';
 import {Description} from '../../../../components/description/Description';
 import {Button} from '../../../../components/button/Button';
 import {InfoLink} from '../../../../components/infoLink/InfoLink';
-import styled from 'styled-components';
-import {theme} from '../../../../styles/Theme';
+import {S} from './Content_Styles'
+
 
 export const Content = () => {
     return (
-        <StyledContent>
-            <Title>
+        <S.Content>
+            <S.Title>
                 Discover and Collect The Best NFTs <span>Digital Art.</span>
-            </Title>
+            </S.Title>
             <Description>
                 Get started with the easiest and most secure platform to buy and trade digital ART and
                 NFT’s.
@@ -18,56 +18,12 @@ export const Content = () => {
                 assets
                 with confidence!
             </Description>
-            <LinkBlock>
+            <S.LinkBlock>
                 <Button as={'a'} styleButton="accent" width="178px" height="52px">Explore Now</Button>
                 <InfoLink href="#">Learn More</InfoLink>
-            </LinkBlock>
-        </StyledContent>
+            </S.LinkBlock>
+        </S.Content>
     );
 };
 
 
-const StyledContent = styled.div`
-  max-width: 544px;
-
-  @media ${theme.media.medium} {
-    max-width: 600px;
-    
-    & ${Description} {
-      text-align: center;
-    }
-  }
-`
-
-const Title = styled.h1`
-  font-family: Spectral, sans-serif;
-  font-size: 64px;
-  font-weight: 600;
-  word-wrap: break-word;
-  line-height: 76px;
-
-  & span {
-    color: ${theme.colors.accent};
-    font-weight: 700;
-  }
-
-  @media ${theme.media.medium} {
-    font-size: 48px;
-    line-height: 46px;
-    text-align: center;
-  }
-
-  @media ${theme.media.mobile} {
-    font-size: 40px;
-  }
-}
-`
-
-const LinkBlock = styled.div`
-  display: flex;
-  align-items: center;
-
-  @media ${theme.media.medium} {
-    justify-content: center;
-  }
-`
