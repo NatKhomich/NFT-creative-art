@@ -27,6 +27,11 @@ const GridItem = styled.div<{ image: string }>`
   url(${props => props.image}) top no-repeat;
   border-radius: 18px;
 
+  &:hover {
+    transition: ${theme.animations.transition};
+    transform: ${theme.animations.transform};
+  }
+
   @media ${theme.media.extraMedium} {
     background-size: cover;
     border-radius: 24px;

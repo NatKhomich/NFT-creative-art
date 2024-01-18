@@ -32,7 +32,7 @@ const ImageOne = styled.div`
   background: url(${imageOne}) no-repeat top;
 
   max-width: 470px;
-  max-height: 450px;
+  max-height: 460px;
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -40,6 +40,12 @@ const ImageOne = styled.div`
   bottom: 10px;
   left: 40px;
 
+  &:hover {
+    transition: ${theme.animations.transition};
+    transform: ${theme.animations.transform};
+    z-index: 3;
+  }
+  
   @media ${theme.media.mobile} {
     max-width: 240px;
     max-height: 228px;
@@ -59,6 +65,12 @@ const ImageTwo = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
+
+  &:hover {
+    transition: ${theme.animations.transition};
+    transform: ${theme.animations.transform};
+    z-index: 3;
+  }
 
   @media ${theme.media.mobile} {
     max-width: 152px;
