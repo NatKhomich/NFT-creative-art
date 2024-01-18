@@ -6,7 +6,7 @@ import {S} from './Subscribe_Styles'
 
 export const Subscribe = () => {
     return (
-        <S.Subscribe>
+        <S.Subscribe id='contact'>
             <Container>
                 <FlexWrapper justify="space-between" wrap="wrap-reverse">
                     <S.Images>

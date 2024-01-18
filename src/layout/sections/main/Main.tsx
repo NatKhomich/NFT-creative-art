@@ -7,7 +7,7 @@ import {S} from './Main_Styles'
 
 export const Main = () => {
     return (
-        <S.Main>
+        <S.Main id={'marketplace'}>
             <Container>
                 <S.GridContainer>
                     <S.GridItem>

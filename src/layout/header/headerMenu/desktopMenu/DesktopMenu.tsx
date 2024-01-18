@@ -13,7 +13,7 @@ export const DesktopMenu = () => {
                 <S.Menu>
                     <Menu />
                 </S.Menu>
-                <Button as="a" width="143px" height="48px" styleButton="accent">Contact</Button>
+                <Button href='#contact' as="a" width="143px" height="48px" styleButton="accent">Contact</Button>
             </FlexWrapper>
         </S.DesktopMenu>
 

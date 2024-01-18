@@ -1,14 +1,17 @@
 import styled, {css} from 'styled-components';
 import {theme} from '../../../styles/Theme';
+import {Link} from 'react-scroll';
+
 
 //menu
 const MenuItem = styled.li`
   position: relative;
 `
 
-const MenuLink = styled.a`
+const MenuLink = styled(Link)`
   font-size: 16px;
   line-height: 26px;
+  text-transform: capitalize;
   
   &:hover {
     &::before {

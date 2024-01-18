@@ -6,7 +6,7 @@ import {S} from './Popular_Styles'
 
 export const Popular = () => {
     return (
-        <S.Popular>
+        <S.Popular id='artists'>
             <Container>
                 <Content/>
                 <Images/>
