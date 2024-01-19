@@ -17,7 +17,7 @@ const MenuLink = styled(Link)`
   &:hover, &.active {
     &::before {
       height: 2px;
-      transition: .2s;
+      transition: ${theme.animations.transition};
     }
   }
   
@@ -25,7 +25,7 @@ const MenuLink = styled(Link)`
     content: '';
     display: inline-block;
     background-color: ${theme.colors.accent};
-
+    height: 0;
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -91,6 +91,12 @@ const MainLink = styled(Link)`
   width: 143px;
   height: 48px;
   color: ${theme.colors.fontBlack};
+
+  &:hover {
+    background-color: #97b436;
+    color: ${theme.colors.fontBlack};
+    transition: ${theme.animations.transition};
+  }
 `
 
 export const S = {

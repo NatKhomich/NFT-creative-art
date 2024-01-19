@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 
     background-image: linear-gradient(${theme.colors.primaryBg} 0%,${
             theme.colors.primaryBg
-    } 100%), url("${bgImage}");
+    } 100%), url(${bgImage});
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;

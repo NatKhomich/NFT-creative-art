@@ -11,7 +11,7 @@ export const InfoLink = styled.a`
   &:hover {
     &::before {
       height: 2px;
-      transition: .2s;
+      transition: ${theme.animations.transition};
     }
   }
 
@@ -19,7 +19,7 @@ export const InfoLink = styled.a`
     content: '';
     display: inline-block;
     background-color: ${theme.colors.accent};
-
+    height: 0;
     position: absolute;
     bottom: -2px;
     left: 0;
