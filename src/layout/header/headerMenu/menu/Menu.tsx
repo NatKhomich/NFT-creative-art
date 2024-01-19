@@ -7,7 +7,7 @@ export const Menu = () => {
         <ul>
             {menuItem.map((item, index) => {
                 return <S.MenuItem key={index}>
-                    <S.MenuLink to={item} smooth>{item}</S.MenuLink>
+                    <S.MenuLink to={item} smooth activeClass="active" spy>{item}</S.MenuLink>
                 </S.MenuItem>
             })}
         </ul>

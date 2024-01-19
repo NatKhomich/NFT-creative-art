@@ -12,8 +12,9 @@ const MenuLink = styled(Link)`
   font-size: 16px;
   line-height: 26px;
   text-transform: capitalize;
+  cursor: pointer;
   
-  &:hover {
+  &:hover, &.active {
     &::before {
       height: 2px;
       transition: .2s;
@@ -77,6 +78,21 @@ const MenuPopup = styled.nav<{ isOpen: boolean }>`
   }
 `
 
+const MainLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 700;
+  line-height: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: ${theme.colors.accent};
+  width: 143px;
+  height: 48px;
+  color: ${theme.colors.fontBlack};
+`
+
 export const S = {
     MenuItem,
     MenuLink,
@@ -84,7 +100,8 @@ export const S = {
     Menu,
     MobileMenu,
     BurgerButton,
-    MenuPopup
+    MenuPopup,
+    MainLink
 }
 
 
