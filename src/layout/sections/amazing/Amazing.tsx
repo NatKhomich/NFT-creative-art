@@ -7,7 +7,7 @@ import {S} from './Amazing_Styles'
 
 export const Amazing = () => {
     return (
-        <S.Amazing id='collections'>
+        <S.Amazing id="collections">
             <Container>
                 <Content/>
                 <Card/>

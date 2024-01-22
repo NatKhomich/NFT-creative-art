@@ -25,6 +25,7 @@ const CardItem = styled.div`
   &:hover {
     transition: ${theme.animations.transition};
     transform: ${theme.animations.transform};
+    border: 1px solid ${theme.colors.accent};
   }
 
   @media ${theme.media.mobile} {

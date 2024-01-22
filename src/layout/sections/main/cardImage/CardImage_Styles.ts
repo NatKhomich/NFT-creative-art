@@ -7,11 +7,9 @@ import mainSmall from '../../../../assets/images/main/mainSmall.webp'
 import starMobile from '../../../../assets/images/main/starMobile.png'
 import groupMobile from '../../../../assets/images/main/groupMobile.webp'
 
-
-
 const CardImage = styled.div`
   position: relative;
-
+  
   &::before {
     content: url(${group});
     position: absolute;
@@ -20,7 +18,7 @@ const CardImage = styled.div`
     left: -60px;
     top: 200px;
     z-index: 2;
-
+    
     @media ${theme.media.mobile} {
       content: url(${groupMobile});
       position: absolute;
@@ -28,6 +26,7 @@ const CardImage = styled.div`
       height: 200px;
       left: -30px;
       top: 160px;
+
     }
   }
 
@@ -36,7 +35,7 @@ const CardImage = styled.div`
     position: absolute;
     left: 8px;
     top: 268px;
-
+    
     @media ${theme.media.mobile} {
       content: url(${starMobile});
       position: absolute;
@@ -85,6 +84,7 @@ const MainCard = styled.div`
   &:hover {
     transition: ${theme.animations.transition};
     transform: ${theme.animations.transform};
+    border: 1px solid ${theme.colors.accent};
   }
 
   @media ${theme.media.medium} {
