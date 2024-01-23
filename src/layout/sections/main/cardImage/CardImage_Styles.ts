@@ -9,40 +9,6 @@ import groupMobile from '../../../../assets/images/main/groupMobile.webp'
 
 const CardImage = styled.div`
   position: relative;
-  
-  &::before {
-    content: url(${group});
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    left: -60px;
-    top: 200px;
-    z-index: 2;
-    
-    @media ${theme.media.mobile} {
-      content: url(${groupMobile});
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      left: -30px;
-      top: 160px;
-
-    }
-  }
-
-  &::after {
-    content: url(${star});
-    position: absolute;
-    left: 8px;
-    top: 268px;
-    
-    @media ${theme.media.mobile} {
-      content: url(${starMobile});
-      position: absolute;
-      left: 0;
-      top: 190px;
-    }
-  }
 `
 
 const ImageBlock = styled.div`
@@ -51,6 +17,46 @@ const ImageBlock = styled.div`
   width: 100%;
   height: 544px;
   border-radius: 26px;
+
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+    &::before {
+    content: url(${group});
+    position: absolute;
+    left: -60px;
+    top: 200px;
+    z-index: 2;
+    animation: rotateAnimation 15s linear infinite;
+    
+    @media ${theme.media.mobile} {
+      content: url(${groupMobile});
+      position: absolute;
+      left: -30px;
+      top: 160px;
+    }
+  }
+
+  &::after {
+    content: url(${star});
+    position: absolute;
+    left: 8px;
+    top: 268px;
+    animation: rotateAnimation 15s linear infinite;
+
+    @media ${theme.media.mobile} {
+      content: url(${starMobile});
+      position: absolute;
+      left: 0;
+      top: 190px;
+    }
+  }
 
   @media ${theme.media.medium} {
     max-width: 380px;

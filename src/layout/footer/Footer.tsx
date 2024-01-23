@@ -8,8 +8,8 @@ import {Fade} from 'react-awesome-reveal';
 
 export const Footer = () => {
     return (
-        <Fade damping={1} delay={300} triggerOnce>
         <S.Footer>
+            <Fade damping={1} delay={300} triggerOnce>
             <Container>
                 <S.Content>
                     <Information/>
@@ -18,8 +18,8 @@ export const Footer = () => {
 
                 <Copyright/>
             </Container>
+            </Fade>
         </S.Footer>
-        </Fade>
     );
 };
 

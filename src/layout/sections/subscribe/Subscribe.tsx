@@ -7,20 +7,20 @@ import {Fade} from 'react-awesome-reveal';
 
 export const Subscribe = () => {
     return (
-        <Fade damping={1} delay={400} triggerOnce>
-        <S.Subscribe id='contact'>
-            <Container>
-                <FlexWrapper justify="space-between" wrap="wrap-reverse">
-                    <S.Images>
-                        <S.ImageOne/>
-                        <S.ImageTwo/>
-                    </S.Images>
+        <S.Subscribe id="contact">
+            <Fade damping={1} delay={400} triggerOnce>
+                <Container>
+                    <FlexWrapper justify="space-between" wrap="wrap-reverse">
+                        <S.Images>
+                            <S.ImageOne/>
+                            <S.ImageTwo/>
+                        </S.Images>
 
-                    <Content/>
-                </FlexWrapper>
-            </Container>
+                        <Content/>
+                    </FlexWrapper>
+                </Container>
+            </Fade>
         </S.Subscribe>
-        </Fade>
     );
 };
 

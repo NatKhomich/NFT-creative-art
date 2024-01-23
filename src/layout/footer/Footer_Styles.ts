@@ -44,14 +44,15 @@ const Information = styled.div`
 
 const SocialIcon = styled.div`
   margin-bottom: 48px;
-  
+
   & svg + svg {
     margin-left: 12px;
   }
 
   & svg:hover {
     cursor: pointer;
-    transform: ${theme.animations.transform};
+    transform: scale(1.2);
+    fill: #ec29ec;
   }
 
   @media ${theme.media.mobile} {
