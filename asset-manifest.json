@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/NFT-creative-art/static/css/main.e6c13ad2.css",
+    "main.js": "/NFT-creative-art/static/js/main.590e5bd4.js",
+    "static/js/787.6658d8b7.chunk.js": "/NFT-creative-art/static/js/787.6658d8b7.chunk.js",
+    "static/media/bg.webp": "/NFT-creative-art/static/media/bg.5d3097437cd8f629e506.webp",
+    "static/media/subscribe1.webp": "/NFT-creative-art/static/media/subscribe1.dde273556203c8a4b7c9.webp",
+    "static/media/ranson.webp": "/NFT-creative-art/static/media/ranson.a957cb6b396c6c095ac3.webp",
+    "static/media/surgeon.webp": "/NFT-creative-art/static/media/surgeon.2b2db57a639744138c7f.webp",
+    "static/media/cyberpunk.webp": "/NFT-creative-art/static/media/cyberpunk.000634647391ed6e5ce1.webp",
+    "static/media/charge.webp": "/NFT-creative-art/static/media/charge.d6a9fd3b38bd4e54119c.webp",
+    "static/media/main.webp": "/NFT-creative-art/static/media/main.6d52473051732ed3fdfc.webp",
+    "static/media/osvaldo.webp": "/NFT-creative-art/static/media/osvaldo.9adf5bdd20e49cb32eb5.webp",
+    "static/media/imageTwoMobile.webp": "/NFT-creative-art/static/media/imageTwoMobile.2fba462d47bf56391663.webp",
+    "static/media/cristio.webp": "/NFT-creative-art/static/media/cristio.565dab67d69c131e2666.webp",
+    "static/media/create2.webp": "/NFT-creative-art/static/media/create2.53746b1a9ae0ff486c4d.webp",
+    "static/media/subscribe2.webp": "/NFT-creative-art/static/media/subscribe2.6cc051f366794f138197.webp",
+    "static/media/imageOneMobile.webp": "/NFT-creative-art/static/media/imageOneMobile.d92b70eb73359d51df7c.webp",
+    "static/media/create1.webp": "/NFT-creative-art/static/media/create1.0d020d74532ad251ee3c.webp",
+    "static/media/sebastian.webp": "/NFT-creative-art/static/media/sebastian.b2aedc8b821d6978eebd.webp",
+    "static/media/mainSmall.webp": "/NFT-creative-art/static/media/mainSmall.18a69c456b68b0d38833.webp",
+    "static/media/sprite.svg": "/NFT-creative-art/static/media/sprite.ffdd5b878467af22f80116e147310b74.svg",
+    "static/media/abraham.webp": "/NFT-creative-art/static/media/abraham.c9667c552f9393252c96.webp",
+    "static/media/group.webp": "/NFT-creative-art/static/media/group.4277a57d18ef9b2a3cc0.webp",
+    "static/media/logo.webp": "/NFT-creative-art/static/media/logo.94088ae0136e9e504859.webp",
+    "static/media/LogoMobile.webp": "/NFT-creative-art/static/media/LogoMobile.67bf7148f7b315d499fc.webp",
+    "index.html": "/NFT-creative-art/index.html",
+    "static/media/groupMobile.webp": "/NFT-creative-art/static/media/groupMobile.3b7eb689f15be1c4a124.webp",
+    "main.e6c13ad2.css.map": "/NFT-creative-art/static/css/main.e6c13ad2.css.map",
+    "main.590e5bd4.js.map": "/NFT-creative-art/static/js/main.590e5bd4.js.map",
+    "787.6658d8b7.chunk.js.map": "/NFT-creative-art/static/js/787.6658d8b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.590e5bd4.js"
+  ]
+}
